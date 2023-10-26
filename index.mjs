@@ -52,6 +52,9 @@ app.post('/buscar-processo', async (req, res) => {
     }
   }
 });
+app.get("/", (req, res) => {
+  res.send('O Servidor está funcionando');
+});
 
 app.listen(port, () => {
   console.log(`Servidor está executando na porta ${port}`);
