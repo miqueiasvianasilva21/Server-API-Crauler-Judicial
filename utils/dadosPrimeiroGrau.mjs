@@ -1,7 +1,9 @@
 import puppeteer from "puppeteer"; 
 
 export async function dadosPrimeiroGrau(dominio,tribunal,numero) {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    executablePath: '/usr/bin/google-chrome',
+  });
   const page = await browser.newPage();
 
   try {

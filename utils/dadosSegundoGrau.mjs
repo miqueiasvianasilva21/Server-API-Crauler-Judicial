@@ -1,7 +1,9 @@
 import puppeteer from "puppeteer";
 
 export async function dadosSegundoGrau(dominio,tribunal,numero) {
-    const browser = await puppeteer.launch();//inicializa o navegador
+  const browser = await puppeteer.launch({
+    executablePath: '/usr/bin/google-chrome',
+  });//inicializa o navegador
     const page = await browser.newPage();//inicializa a página
   
     try {
