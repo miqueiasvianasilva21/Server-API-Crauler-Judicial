@@ -1,7 +1,9 @@
 {
     "version": 2,
     "builds": [
-        { "src": "index.mjs", "use": "@vercel/node" }
+        { "src": "index.mjs", "use": "@vercel/node","env": {
+            "PUPPETEER_EXECUTABLE_PATH": "/usr/bin/google-chrome"
+          } }
     ],
     "routes":[
         {
